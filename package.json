@@ -1,0 +1,28 @@
+{
+  "name": "backend-full",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon server.js",
+    "start": "node server.js",
+    "create-system": "node src/scripts/createSystemUser.js",
+    "add-funds": "node src/scripts/addInitialFundsToSystem.js",
+    "test-tx": "node src/scripts/testTransaction.js",
+    "get-token": "node src/scripts/getSystemToken.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.2.1",
+    "nodemailer": "^8.0.1",
+    "uuid": "^13.0.0"
+  }
+}
