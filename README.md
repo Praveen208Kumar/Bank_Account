@@ -102,6 +102,58 @@ Server runs on `http://localhost:3000`
 - `npm run test-tx` - Test transactions
 - `npm run get-token` - Get system token
 
+## Testing with Postman
+
+### Import Collection
+
+1. **Download Postman** from [https://www.postman.com/downloads/](https://www.postman.com/downloads/)
+
+2. **Import the collection:**
+   - Open Postman
+   - Click **Import** button (top left)
+   - Choose **Link** tab
+   - Paste this collection URL:
+     ```
+     https://www.postman.com/Praveen208Kumar/workspace/bank-account-api/collection
+     ```
+
+3. **Set Environment Variables in Postman:**
+   - Create a new Environment called "Bank Account"
+   - Add these variables:
+     ```
+     BASE_URL: http://localhost:3000
+     TOKEN: (will be filled after login)
+     USER_ID: (your user id)
+     ACCOUNT_ID: (your account id)
+     ```
+
+### Quick Test Steps
+
+1. **Register User**
+   - POST `/api/auth/register`
+   - Body: `{ "email": "test@example.com", "password": "yourpassword", "fullName": "Test User" }`
+
+2. **Login**
+   - POST `/api/auth/login`
+   - Body: `{ "email": "test@example.com", "password": "yourpassword" }`
+   - Copy the token from response and set it as `TOKEN` in environment
+
+3. **Create Account**
+   - POST `/api/accounts`
+   - Header: `Authorization: Bearer {{TOKEN}}`
+
+4. **Make Transaction**
+   - POST `/api/transactions/transfer`
+   - Header: `Authorization: Bearer {{TOKEN}}`
+
+### Postman Features Used
+
+- ✅ Environment variables
+- ✅ Authorization Bearer tokens
+- ✅ Pre-request scripts
+- ✅ Test assertions
+- ✅ Response body parsing
+
 ## API Endpoints
 
 ### Authentication Routes (`/api/auth`)
