@@ -114,8 +114,9 @@ Server runs on `http://localhost:3000`
    - Choose **Link** tab
    - Paste this collection URL:
      ```
-     https://www.postman.com/Praveen208Kumar/workspace/bank-account-api/collection
+     https://praveen9686kumar2006-2995026.postman.co/workspace/praveen-kumar's-Workspace~6953d9a2-fe80-46b4-83c8-dff4cd7e02ec/collection/51248365-c7ee8e68-0289-4ca7-8544-baa02a762786
      ```
+   - Or click directly: [Import Bank Account API Collection](https://praveen9686kumar2006-2995026.postman.co/workspace/praveen-kumar's-Workspace~6953d9a2-fe80-46b4-83c8-dff4cd7e02ec/collection/51248365-c7ee8e68-0289-4ca7-8544-baa02a762786?action=share&source=copy-link&creator=51248365)
 
 3. **Set Environment Variables in Postman:**
    - Create a new Environment called "Bank Account"
